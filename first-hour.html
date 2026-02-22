@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Hour | ANTRAAL MUN - The Second Hour</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="navbar-brand">
+        <img src="assets/logo.png" alt="ANTRAAL MUN Logo">
+        <span>ANTRAAL MUN</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="committee.html">Committee</a></li>
+        <li><a href="first-hour.html">First Hour</a></li>
+        <li><a href="core-team.html">Core Team</a></li>
+      </ul>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleNav()">&#9776;</button>
+  </nav>
+
+  <main>
+    <header class="page-header">
+      <div class="container">
+        <h1>The First Hour</h1>
+        <p>Understanding the journey to The Second Hour</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">From First to Second Hour</h2>
+        <p class="section-subtitle">The theme "The Second Hour" builds upon the foundation of the first.</p>
+        <p>The First Hour represents the initial phase of any meaningful endeavor—the moment of preparation, learning, and laying the groundwork. At ANTRAAL MUN, we recognize that every delegate's journey begins with that crucial first hour of understanding the rules of procedure, researching their country's stance, and building the confidence to speak.</p>
+        <p>The Second Hour is when that preparation transforms into action. It is the pivotal moment when ideas are voiced, alliances are formed, and resolutions take shape. Our conference is designed to guide delegates from the first hour of preparation to the second hour of impactful debate and diplomacy.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">What to Expect</h2>
+        <p>Whether you are a first-time delegate or a seasoned MUN veteran, ANTRAAL MUN provides a platform where your first hour of preparation meets your second hour of excellence. Join us to experience the transition from preparation to performance.</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-links">
+          <a href="contact.html">Contact</a>
+          <a href="refund-policy.html">Refund Policy</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/theantraalmun" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="LinkedIn">LI</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/animations.js"></script>
+  <script>
+    function toggleNav() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('active'));
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANTRAAL MUN - The Second Hour | Model United Nations</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="navbar-brand">
+        <img src="assets/logo.png" alt="ANTRAAL MUN Logo">
+        <span>ANTRAAL MUN</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="committee.html">Committee</a></li>
+        <li><a href="first-hour.html">First Hour</a></li>
+        <li><a href="core-team.html">Core Team</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <a href="registration.html" class="btn btn-nav">Register Now</a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleNav()">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-bg-overlay"></div>
+      <div class="hero-content">
+        <img src="assets/logo.png" alt="ANTRAAL MUN" class="hero-logo">
+        <p class="hero-the">THE</p>
+        <h1 class="hero-title">ANTRAAL</h1>
+        <p class="hero-subtitle">MODEL UNITED NATIONS</p>
+        <p class="hero-meta">The Second Hour | March 2026 | New Delhi</p>
+        <a href="registration.html" class="btn btn-hero">Register Now</a>
+      </div>
+      <div class="hero-scroll-indicator">
+        <span class="scroll-arrow"></span>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">What is ANTRAAL MUN?</h2>
+        <p class="section-subtitle animate-on-scroll">A platform for young minds to debate, deliberate, and shape the future.</p>
+        <p class="animate-on-scroll">ANTRAAL Model United Nations is a premier conference that brings together passionate delegates from across the nation to engage in diplomatic discourse. Rooted in the spirit of the United Nations, we provide a platform where students simulate real-world international relations, negotiate resolutions, and develop critical thinking skills.</p>
+        <p>Our theme "The Second Hour" symbolizes the crucial moment when ideas transform into action—when debate turns into decision, and dialogue becomes diplomacy. It represents the pivotal hour when delegates move from discussion to resolution, embodying the essence of meaningful change.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Our Vision</h2>
+        <p>We envision a world where young leaders are equipped with the skills to address global challenges. ANTRAAL MUN aims to foster a culture of informed debate, cross-cultural understanding, and collaborative problem-solving. Through our conferences, we strive to nurture the diplomats and policymakers of tomorrow.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title animate-on-scroll">Highlights from Previous Conferences</h2>
+        <p class="section-subtitle animate-on-scroll">Glimpses of excellence from our past editions.</p>
+        <div class="highlights-grid">
+          <div class="highlight-card animate-on-scroll">
+            <div class="highlight-img">Conference Moments</div>
+            <div class="card-body">
+              <h3>Engaging Debates</h3>
+              <p>Delegates in action during committee sessions.</p>
+            </div>
+          </div>
+          <div class="highlight-card animate-on-scroll">
+            <div class="highlight-img">Award Ceremony</div>
+            <div class="card-body">
+              <h3>Recognition & Excellence</h3>
+              <p>Celebrating outstanding delegates.</p>
+            </div>
+          </div>
+          <div class="highlight-card animate-on-scroll">
+            <div class="highlight-img">Networking</div>
+            <div class="card-body">
+              <h3>Building Connections</h3>
+              <p>Delegates connecting beyond the committee.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-links">
+          <a href="contact.html">Contact</a>
+          <a href="refund-policy.html">Refund Policy</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/theantraalmun" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="LinkedIn">LI</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/animations.js"></script>
+  <script>
+    function toggleNav() {
+      document.querySelector('.nav-links').classList.toggle('active');
+      document.querySelector('.nav-toggle').classList.toggle('active');
+    }
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('active');
+        document.querySelector('.nav-toggle').classList.remove('active');
+      });
+    });
+    // Navbar scroll effect - transparent on hero, solid on scroll (ref: theklavyamun, indraprasthamun)
+    function updateNavbar() {
+      var navbar = document.getElementById('navbar');
+      var hero = document.querySelector('.hero');
+      if (navbar && hero) {
+        navbar.classList.toggle('scrolled', window.scrollY > 80);
+      }
+    }
+    window.addEventListener('scroll', updateNavbar);
+    updateNavbar(); // Initial check
+  </script>
+</body>
+</html>

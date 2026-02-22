@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core Team | ANTRAAL MUN - The Second Hour</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="navbar-brand">
+        <img src="assets/logo.png" alt="ANTRAAL MUN Logo">
+        <span>ANTRAAL MUN</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="committee.html">Committee</a></li>
+        <li><a href="first-hour.html">First Hour</a></li>
+        <li><a href="core-team.html">Core Team</a></li>
+      </ul>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleNav()">&#9776;</button>
+  </nav>
+
+  <main>
+    <header class="page-header">
+      <div class="container">
+        <h1>Core Team</h1>
+        <p>Meet the Secretariat behind ANTRAAL MUN</p>
+      </div>
+    </header>
+
+    <section class="section core-team-section">
+      <div class="container">
+        <div class="core-team-tree animate-on-scroll">
+          <!-- Level 1: Founder President -->
+          <div class="tree-level">
+            <div class="tree-node">
+              <div class="flip-card-container">
+                <div class="flip-card" data-insta="https://www.instagram.com/theantraalmun">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <div class="member-photo" data-name="Yashveer Ohri"><img src="assets/team/1.png" alt="Yashveer Ohri" onerror="this.parentElement.classList.add('no-img')"></div>
+                      <div class="card-info">
+                        <h3>Yashveer Ohri</h3>
+                        <p class="post">Founder President</p>
+                      </div>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>Founder President</p>
+                      <p>Tap to view Instagram</p>
+                      <span class="insta-link">@theantraalmun</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tree-connector"></div>
+
+          <!-- Level 2: Secretary General, Chief Advisor, Senior Advisor -->
+          <div class="tree-level">
+            <div class="tree-node">
+              <div class="flip-card-container">
+                <div class="flip-card" data-insta="https://www.instagram.com/theantraalmun">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <div class="member-photo" data-name="Utkarsh"><img src="assets/team/utkarsh.png" alt="Utkarsh" onerror="this.parentElement.classList.add('no-img')"></div>
+                      <div class="card-info">
+                        <h3>Utkarsh</h3>
+                        <p class="post">Secretary General</p>
+                      </div>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>Secretary General</p>
+                      <p>Tap to view Instagram</p>
+                      <span class="insta-link">@theantraalmun</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-node">
+              <div class="flip-card-container">
+                <div class="flip-card" data-insta="https://www.instagram.com/theantraalmun">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <div class="member-photo" data-name="Arjit Banik"><img src="assets/team/arjit-banik.png" alt="Arjit Banik" onerror="this.parentElement.classList.add('no-img')"></div>
+                      <div class="card-info">
+                        <h3>Arjit Banik</h3>
+                        <p class="post">Chief Advisor</p>
+                      </div>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>Chief Advisor</p>
+                      <p>Tap to view Instagram</p>
+                      <span class="insta-link">@theantraalmun</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tree-node">
+              <div class="flip-card-container">
+                <div class="flip-card" data-insta="https://www.instagram.com/theantraalmun">
+                  <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                      <div class="member-photo" data-name="Rupashi Goyal"><img src="assets/team/rupashi-goyal.png" alt="Rupashi Goyal" onerror="this.parentElement.classList.add('no-img')"></div>
+                      <div class="card-info">
+                        <h3>Rupashi Goyal</h3>
+                        <p class="post">Senior Advisor</p>
+                      </div>
+                    </div>
+                    <div class="flip-card-back">
+                      <p>Senior Advisor</p>
+                      <p>Tap to view Instagram</p>
+                      <span class="insta-link">@theantraalmun</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-links">
+          <a href="contact.html">Contact</a>
+          <a href="refund-policy.html">Refund Policy</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/theantraalmun" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="LinkedIn">LI</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/animations.js"></script>
+  <script>
+    function toggleNav() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('active'));
+    });
+
+    document.querySelectorAll('.flip-card').forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (this.classList.contains('flipped')) {
+          var insta = this.getAttribute('data-insta');
+          if (insta) window.open(insta, '_blank');
+        } else {
+          this.classList.add('flipped');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

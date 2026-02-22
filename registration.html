@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration | ANTRAAL MUN - The Second Hour</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="navbar-brand">
+        <img src="assets/logo.png" alt="ANTRAAL MUN Logo">
+        <span>ANTRAAL MUN</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="committee.html">Committee</a></li>
+        <li><a href="first-hour.html">First Hour</a></li>
+        <li><a href="core-team.html">Core Team</a></li>
+      </ul>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleNav()">&#9776;</button>
+  </nav>
+
+  <main>
+    <header class="page-header">
+      <div class="container">
+        <h1>Registration</h1>
+        <p>Register for ANTRAAL MUN - The Second Hour</p>
+      </div>
+    </header>
+
+    <!-- Set to true to show form, false to show "REGISTRATION OPENING SOON" -->
+    <script>
+      window.REGISTRATION_OPEN = true;
+    </script>
+
+    <section id="registration-opening-soon" class="form-section" style="display: none;">
+      <div class="container">
+        <div class="form-card animate-on-scroll text-center" style="padding: 4rem 2rem;">
+          <h2 style="color: var(--maroon); font-size: clamp(1.5rem, 4vw, 2.5rem); margin-bottom: 1rem;">REGISTRATION OPENING SOON</h2>
+          <p style="color: var(--text-muted);">Stay tuned. We will open registrations shortly.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="registration-form-section" class="form-section">
+      <div class="container">
+        <div class="form-card animate-on-scroll">
+          <form id="registration-form" action="https://formsubmit.co/yadavamanjeet317@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="ANTRAAL MUN - New Registration">
+            <input type="hidden" name="_next" id="formsubmit-next" value="">
+            <input type="hidden" name="_captcha" value="false">
+            <div class="form-group">
+              <label for="email">Email ID *</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com">
+            </div>
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Full Name">
+            </div>
+            <div class="form-group">
+              <label for="classyear">Class / Year *</label>
+              <input type="text" id="classyear" name="class_year" required placeholder="e.g. 1st Year, 12th, B.A. 2nd Year">
+            </div>
+            <div class="form-group">
+              <label for="experience">Previous MUN Experience</label>
+              <textarea id="experience" name="experience" rows="3" placeholder="List any previous MUN conferences or roles"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="contact">Contact Number *</label>
+              <input type="tel" id="contact" name="contact" required placeholder="10-digit mobile number">
+            </div>
+            <div class="form-group">
+              <label for="committee1">Committee Preference 1 *</label>
+              <select id="committee1" name="committee_preference_1" required>
+                <option value="">Select Committee</option>
+                <option value="UNSC">UN Security Council</option>
+                <option value="UNGA">UN General Assembly</option>
+                <option value="WHO">World Health Organization</option>
+                <option value="UNHRC">UN Human Rights Council</option>
+                <option value="IP">International Press</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="committee2">Committee Preference 2 *</label>
+              <select id="committee2" name="committee_preference_2" required>
+                <option value="">Select Committee</option>
+                <option value="UNSC">UN Security Council</option>
+                <option value="UNGA">UN General Assembly</option>
+                <option value="WHO">World Health Organization</option>
+                <option value="UNHRC">UN Human Rights Council</option>
+                <option value="IP">International Press</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="portfolio1">Portfolio Preference 1 *</label>
+              <select id="portfolio1" name="portfolio_preference_1" required>
+                <option value="">Select Portfolio</option>
+                <option value="delegate">Delegate</option>
+                <option value="chair">Chair</option>
+                <option value="rapporteur">Rapporteur</option>
+                <option value="journalist">Journalist</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="portfolio2">Portfolio Preference 2 *</label>
+              <select id="portfolio2" name="portfolio_preference_2" required>
+                <option value="">Select Portfolio</option>
+                <option value="delegate">Delegate</option>
+                <option value="chair">Chair</option>
+                <option value="rapporteur">Rapporteur</option>
+                <option value="journalist">Journalist</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="upi-section">
+              <h3 style="margin-bottom: 0.75rem; color: var(--maroon);">Payment Details</h3>
+              <p style="font-size: 0.9rem; margin-bottom: 1rem;">Scan the UPI QR code below to complete payment.</p>
+              <div class="qr-placeholder">
+                <img src="assets/upi-qr.png" alt="UPI QR Code" onerror="this.parentElement.innerHTML='Add upi-qr.png to assets folder'">
+              </div>
+              <div class="form-group">
+                <label for="transaction">Transaction ID</label>
+                <input type="text" id="transaction" name="transaction_id" placeholder="Enter UPI transaction ID after payment">
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Registration</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-links">
+          <a href="contact.html">Contact</a>
+          <a href="refund-policy.html">Refund Policy</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/theantraalmun" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="LinkedIn">LI</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    var DRAFT_KEY = 'antraal_registration_draft';
+
+    (function() {
+      var nextInput = document.getElementById('formsubmit-next');
+      if (nextInput) nextInput.value = window.location.origin + window.location.pathname.replace(/[^/]+$/, '') + 'registration-confirmation.html';
+    })();
+
+    (function() {
+      if (window.REGISTRATION_OPEN) {
+        document.getElementById('registration-form-section').style.display = 'block';
+        document.getElementById('registration-opening-soon').style.display = 'none';
+      } else {
+        document.getElementById('registration-form-section').style.display = 'none';
+        document.getElementById('registration-opening-soon').style.display = 'block';
+      }
+    })();
+
+    function toggleNav() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('active'));
+    });
+
+    var form = document.getElementById('registration-form');
+
+    function saveDraft() {
+      var data = {};
+      var inputs = form.querySelectorAll('input, select, textarea');
+      for (var i = 0; i < inputs.length; i++) {
+        var el = inputs[i];
+        if (el.name) data[el.name] = el.value;
+      }
+      try {
+        localStorage.setItem(DRAFT_KEY, JSON.stringify(data));
+      } catch (e) {}
+    }
+
+    function loadDraft() {
+      try {
+        var saved = localStorage.getItem(DRAFT_KEY);
+        if (!saved) return;
+        var data = JSON.parse(saved);
+        var inputs = form.querySelectorAll('input, select, textarea');
+        for (var i = 0; i < inputs.length; i++) {
+          var el = inputs[i];
+          if (el.name && data[el.name] !== undefined && data[el.name] !== '') {
+            el.value = data[el.name];
+          }
+        }
+      } catch (e) {}
+    }
+
+    loadDraft();
+
+    form.querySelectorAll('input, select, textarea').forEach(function(el) {
+      el.addEventListener('input', saveDraft);
+      el.addEventListener('change', saveDraft);
+    });
+
+    form.addEventListener('submit', function() {
+      try {
+        localStorage.removeItem(DRAFT_KEY);
+      } catch (e) {}
+    });
+  </script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

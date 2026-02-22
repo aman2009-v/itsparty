@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Confirmed | ANTRAAL MUN</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="navbar-brand">
+        <img src="assets/logo.png" alt="ANTRAAL MUN Logo">
+        <span>ANTRAAL MUN</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="committee.html">Committee</a></li>
+        <li><a href="first-hour.html">First Hour</a></li>
+        <li><a href="core-team.html">Core Team</a></li>
+      </ul>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleNav()">&#9776;</button>
+  </nav>
+
+  <main>
+    <section class="confirmation-page">
+      <div class="confirmation-box animate-on-scroll">
+        <h1>Registration Received</h1>
+        <p>Thank you for registering for ANTRAAL MUN - The Second Hour. We have received your application and will contact you shortly with further details.</p>
+        <a href="index.html" class="btn btn-primary">Return to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-links">
+        <a href="contact.html">Contact</a>
+        <a href="refund-policy.html">Refund Policy</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/theantraalmun" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="LinkedIn">LI</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/animations.js"></script>
+  <script>
+    function toggleNav() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('active'));
+    });
+  </script>
+</body>
+</html>

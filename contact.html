@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | ANTRAAL MUN - The Second Hour</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="navbar-brand">
+        <img src="assets/logo.png" alt="ANTRAAL MUN Logo">
+        <span>ANTRAAL MUN</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="registration.html">Registration</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="committee.html">Committee</a></li>
+        <li><a href="first-hour.html">First Hour</a></li>
+        <li><a href="core-team.html">Core Team</a></li>
+      </ul>
+    </div>
+    <button class="nav-toggle" aria-label="Toggle menu" onclick="toggleNav()">&#9776;</button>
+  </nav>
+
+  <main>
+    <header class="page-header">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>Get in touch with the ANTRAAL MUN team</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <div class="form-card animate-on-scroll" style="max-width: 500px;">
+          <h2 class="section-title">Reach Out</h2>
+          <p class="mb-2">For any queries regarding registration, committees, or the conference, please contact us:</p>
+          <p><strong>Email:</strong> <a href="mailto:yadavamanjeet317@gmail.com" style="color: var(--maroon);">yadavamanjeet317@gmail.com</a></p>
+          <p><strong>Instagram:</strong> <a href="https://www.instagram.com/theantraalmun" target="_blank" rel="noopener noreferrer" style="color: var(--maroon);">@theantraalmun</a></p>
+          <p class="mt-2">We will respond to your inquiry as soon as possible.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <div class="footer-links">
+          <a href="contact.html">Contact</a>
+          <a href="refund-policy.html">Refund Policy</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/theantraalmun" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="LinkedIn">LI</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="js/animations.js"></script>
+  <script>
+    function toggleNav() {
+      document.querySelector('.nav-links').classList.toggle('active');
+    }
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => document.querySelector('.nav-links').classList.remove('active'));
+    });
+  </script>
+</body>
+</html>
